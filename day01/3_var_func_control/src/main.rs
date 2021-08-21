@@ -1,8 +1,36 @@
+const MAX_POINS: u32 = 10_0000;
+
 fn main() {
-    // if_1();
-    // if_2();
-    // loop_1();
-    loop_2();
+    println!("Hello, world!");
+
+    let x = 5;
+
+    let x = x + 1;
+    let x = x * 2;
+
+    let x = true;
+    let x = false;
+    let x = 10 / 2; // i32
+    let x = 49.0 / 11.0; // f64
+
+    let y = "d"; // char
+
+    let tup: (i32, f64, u8) = (500, 4.2, 1);
+
+    // let (x, y, z) = tup;
+    println!("{} {} {}", tup.0, tup.1, tup.2);
+
+    let a = [1, 2, 3, 4, 5];
+    let a: [i32; 5] = [1, 2, 3, 4, 5];
+    let a = [3; 5]; // [3, 3, 3, 3, 3]
+}
+
+fn five() -> i32 {
+    5
+}
+
+fn plus_five(x: i32) -> i32 {
+    x + 5
 }
 
 fn if_1() {
@@ -64,6 +92,13 @@ fn for_1() {
     for element in a.iter() {
         println!("the value is: {}", element);
     }
+}
+
+fn for_2 (){
+    for number in (1..4).rev() {
+        println!("{}!", number);
+    }
+    println!("LIFTOFF!!!");
 }
 
 
